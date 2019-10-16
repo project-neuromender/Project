@@ -184,6 +184,11 @@ public class Hand : MonoBehaviourPunCallbacks
         Pickup();
     }
 
+    public void DropObject()
+    {
+        Drop();
+    }
+
     public void TryInteraction()
     {
         if (NearestInteraction())
@@ -212,9 +217,9 @@ public class Hand : MonoBehaviourPunCallbacks
     
     public void StopInteraction()
     {
-         //  Moveable heldObject = socket.GetStoredObject();
-        //if (heldObject)
-        //  heldObject.EndInteraction(this);
+          Moveable heldObject = socket.GetStoredObject();
+        if (heldObject)
+          heldObject.EndInteraction(this);
     }
 
     public Socket GetSocket()
