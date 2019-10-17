@@ -9,18 +9,23 @@ using Valve.VR.InteractionSystem;
 
 public class CreateRoomMenu : MonoBehaviourPunCallbacks
 {
-    //[SerializeField]
-    //private Text _RoomName;
-    // private Text _JoinRoom;
     public InputField _RoomName;
     public InputField _JoinRoom;
     private GameObject ScrollView;
 
-    //public InputField mainInputField;
+    public Text _PlayerNickname;
 
     private RoomCanvases _roomCanvases;
     public SteamVR_LaserPointer laserPointer;
-    
+
+    void Start()
+    {
+        if (PhotonNetwork.IsConnected)
+        {
+            _PlayerNickname.text = "Player Nickname : " + PhotonNetwork.NickName;
+        }
+    }
+
     void Awake()
     {
         laserPointer.PointerClick += PointerClick;
