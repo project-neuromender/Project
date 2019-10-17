@@ -5,16 +5,22 @@ using Photon.Pun;
 using Valve.VR.Extras;
 using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
+using Photon;
 
-public class UIButton : MonoBehaviour
+[PunRPC]
+public class UIButton : MonoBehaviourPunCallbacks
 {
     public SteamVR_LaserPointer laserPointer;
 
     private void Awake()
     {
-        laserPointer.PointerIn += OnPointerIn;
-        laserPointer.PointerOut += OnPointerOut;
-        laserPointer.PointerClick += PointerClick;
+        if (photonView.IsMine)
+        {
+
+            laserPointer.PointerIn += OnPointerIn;
+            laserPointer.PointerOut += OnPointerOut;
+            laserPointer.PointerClick += PointerClick;
+        }
 
     }
 
