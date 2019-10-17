@@ -5,7 +5,7 @@ using Photon.Pun;
 using Valve.VR.Extras;
 using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
-using Photon;
+
 
 [PunRPC]
 public class UIButton : MonoBehaviourPunCallbacks
@@ -16,7 +16,6 @@ public class UIButton : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-
             laserPointer.PointerIn += OnPointerIn;
             laserPointer.PointerOut += OnPointerOut;
             laserPointer.PointerClick += PointerClick;
@@ -41,15 +40,20 @@ public class UIButton : MonoBehaviourPunCallbacks
         if (e.target.name == "LeaveButton")
         {
             Debug.Log("Button was clicked");
-            LeaveRoom();
+            OnLeftRoom();
         }
     }
 
-    public void LeaveRoom()
+
+
+    public override void OnLeftRoom()
     {
-        Debug.Log("Return to lobby");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameMenu");
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel(1);
+       // UnityEngine.SceneManagement.SceneManager.LoadScene("Rooms");
     }
+    
+
     // Start is called before the first frame update
     void Start()
     {
