@@ -548,7 +548,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4934886004548577380}
+  m_GameObject: {fileID: 4935858523658763579}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4934886004548577380}
+  m_GameObject: {fileID: 4935858523658763579}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -690,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2306388210277633662
 Transform:
   m_ObjectHideFlags: 0
@@ -933,6 +933,7 @@ GameObject:
   - component: {fileID: 6575696536226240351}
   - component: {fileID: 1375152436773035092}
   - component: {fileID: 1124138247209018976}
+  - component: {fileID: 3118063015258310255}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Controller
@@ -953,7 +954,7 @@ Transform:
   m_Children:
   - {fileID: 6575696536226672398}
   - {fileID: 655341676327070306}
-  - {fileID: 4931869098524805024}
+  - {fileID: 4935858523658762251}
   m_Father: {fileID: 6575696536226734064}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1093,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  pointer: {fileID: 0}
+  pointer: {fileID: 6245953219740615620}
   m_GrabAction:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
@@ -1146,7 +1147,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   TouchpadAction:
-    actionPath: 
+    actionPath: /actions/default/in/Teleport
     needsReinit: 0
   OnTouchpadDown:
     m_PersistentCalls:
@@ -1158,6 +1159,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3118063015258310255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575696536226240350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d89fdc840f80774292ac48ec55b951e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  M_Pointer: {fileID: 5478723112494537474}
+  m_TeleportAction:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  CameraTesting: {fileID: 6575696536226734064}
 --- !u!1 &6575696536226431596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1262,7 @@ Transform:
   m_Children:
   - {fileID: 6575696536226676370}
   - {fileID: 7490906443553979176}
-  - {fileID: 9113226870749057467}
+  - {fileID: 9112640716643050299}
   - {fileID: 3913315980735867230}
   m_Father: {fileID: 6575696536226734064}
   m_RootOrder: 1
@@ -1603,7 +1621,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6575696536226483720}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f0522eaef74d984591c060d05a095c8, type: 3}
   m_Name: 
@@ -1830,7 +1848,7 @@ GameObject:
   - component: {fileID: 4474545224505656020}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2064,7 +2082,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9112215751254960427}
+  m_GameObject: {fileID: 9112640716643051076}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -2086,7 +2104,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9112215751254960427}
+  m_GameObject: {fileID: 9112640716643051076}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -2105,6 +2123,10 @@ PrefabInstance:
     - target: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_Name
       value: vr_glove_left_model_slim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
+      propertyPath: m_TagString
+      value: Controller
       objectReference: {fileID: 0}
     - target: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2153,13 +2175,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
---- !u!4 &4931869098524805024 stripped
+--- !u!4 &4935858523658762251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   m_PrefabInstance: {fileID: 4935858523658763334}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4934886004548577380 stripped
+--- !u!1 &4935858523658763579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
@@ -2175,6 +2197,10 @@ PrefabInstance:
     - target: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_Name
       value: vr_glove_right_model_slim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
+      propertyPath: m_TagString
+      value: Controller
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2223,15 +2249,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
---- !u!4 &9113226870749057467 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25,
+--- !u!1 &9112640716643051076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
   m_PrefabInstance: {fileID: 9112640716643051265}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &9112215751254960427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
+--- !u!4 &9112640716643050299 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
   m_PrefabInstance: {fileID: 9112640716643051265}
   m_PrefabAsset: {fileID: 0}
