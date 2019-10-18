@@ -9,8 +9,9 @@ public class Hand : MonoBehaviourPunCallbacks
     //private bool activity;
     public GameObject menu;
     public GameObject pointer;
-   
-
+    public GameObject controller;
+    public GameObject controllerPointer;
+  
     private Socket socket = null;
     private SteamVR_Behaviour_Pose pose = null;
 
@@ -29,8 +30,25 @@ public class Hand : MonoBehaviourPunCallbacks
             m_Joint = GetComponent<FixedJoint>();
             menu.SetActive(false);
             pointer.SetActive(false);
+            
+            controller.GetComponent<Teleporting>().enabled = false;
 
         }
+    }
+
+    public void Teleport()
+    {
+       
+        controller.GetComponent<Teleporting>().enabled = true;
+        controllerPointer.SetActive(true);
+
+    }
+
+    public void CantTeleport()
+    {
+        controller.GetComponent<Teleporting>().enabled = false;
+        controllerPointer.SetActive(false);
+
     }
 
     public void PointerOut()

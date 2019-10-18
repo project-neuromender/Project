@@ -10,7 +10,7 @@ public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
     public Camera cam;
     // liat of scripts that should only be active for the local player( PlayerController)
     public MonoBehaviour[] localScripts;
-    // list of GameObjects that should onlynbe active for the local player (Camera,AudioListener)
+    // list of GameObjects that should only be active for the local player (Camera,AudioListener)
     public GameObject[] localObjects;
     //values that will be synced over network
     Vector3 latestPos;

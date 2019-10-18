@@ -26,13 +26,14 @@ public class Teleporting : MonoBehaviourPunCallbacks
         {
             m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
             m_Joint = GetComponent<FixedJoint>();
+            M_Pointer.SetActive(false);
+
         }
     }
     private void Update()
     {
         if (photonView.IsMine)
         {
-            //Pointer
             m_HasPosition = UpdatePointer();
             M_Pointer.SetActive(m_HasPosition);
 
@@ -40,6 +41,8 @@ public class Teleporting : MonoBehaviourPunCallbacks
             if (m_TeleportAction.GetLastStateUp(m_Pose.inputSource))
                 TryTeleport();
         }
+
+
     }
 
     private void TryTeleport()
