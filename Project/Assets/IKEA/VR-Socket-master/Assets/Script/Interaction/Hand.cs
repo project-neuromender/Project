@@ -64,16 +64,11 @@ public class Hand : MonoBehaviourPunCallbacks
     public void MenuAppear()
     {
         menu.SetActive(true);
-        //GameObject cube = Instantiate(menu, new Vector3(0, 0, 0), Quaternion.identity);   
     }
 
     public void MenuDissappear()
     {
         menu.SetActive(false);
-      // if (GameObject.FindGameObjectWithTag("Menu").activeSelf)
-      //  {
-        //   Destroy(GameObject.FindGameObjectWithTag("Menu"));
-      // }
     }
 
    
@@ -147,13 +142,7 @@ public class Hand : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            //function interact dengan interactable script
             AddInteractable(other.gameObject);
-
-           // if (other.gameObject.CompareTag("Cube"))
-           // {
-            //    return;
-           // }
         }
     }
 
@@ -163,8 +152,6 @@ public class Hand : MonoBehaviourPunCallbacks
         {
             //layer "interactable"
             Interactable newInteractable = newObject.GetComponent<Interactable>();
-
-            //gameObject.CompareTag("Interactable");
 
             // add list
             contactInteractables.Add(newInteractable);
@@ -177,12 +164,6 @@ public class Hand : MonoBehaviourPunCallbacks
         {
             //function interact dgn interactable script
             RemoveInteractable(other.gameObject);
-
-          //  if (other.gameObject.CompareTag("Cube"))
-           // {
-              //  return;
-          //  }
-
         }
     }
 
@@ -190,9 +171,9 @@ public class Hand : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            // remove cube yg tgh pegang
+            // remove cube in Hand
             Interactable exisitngInteractable = newObject.GetComponent<Interactable>();
-            //buang dalam list contact interactable
+            //remove from list contact interactable
             contactInteractables.Remove(exisitngInteractable);
         }
     }
@@ -219,7 +200,7 @@ public class Hand : MonoBehaviourPunCallbacks
     {
         Interactable nearestObject = Utility.GetNearestInteractable(transform.position, contactInteractables);
 
-        if (nearestObject)
+        if (nearestObject ) 
             nearestObject.StartInteraction(this);
 
         return nearestObject;
