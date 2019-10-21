@@ -10,6 +10,11 @@ using Valve.VR.InteractionSystem;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    [SerializeField]
+    private string _gameVersion = "0.0.0";
+
+    public Text Status;
+    public Text _playerName;
 
     string roomName = "My Room";
     bool ShowGUI = true;
@@ -19,6 +24,12 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void OnClick_ConnectBtn()
     {
+        Debug.Log("Connecting to Server...");
+        Status.text = "Connecting to Server...";
+        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.NickName = _playerName.text;
+        Debug.Log(PhotonNetwork.NickName);
+        PhotonNetwork.GameVersion = _gameVersion;
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -44,8 +55,30 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.JoinLobby(TypedLobby.Default);
-        PhotonNetwork.LoadLevel("Rooms");
+        //MasterManager.DebugConsole.AddText("Connected to Photon", this);
+        Debug.Log("Connected to Self-hosted server", this);
+        Status.text = "Connected to Self-hosted server.";
+        Debug.Log("My Nickname is " + PhotonNetwork.LocalPlayer.NickName, this);
+        Status.text = "My Nickname is " + PhotonNetwork.LocalPlayer.NickName;
+
+        if (!PhotonNetwork.InLobby)
+        {
+            PhotonNetwork.JoinLobby(TypedLobby.Default);
+        }
     }
-    
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Debug.Log("Failed to connect to Self-hosted server " + cause.ToString(), this);
+        Status.text = "Failed to connect to Self-hosted server." + cause.ToString();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Joined lobby.");
+        Status.text = "Joined lobby.";
+        PhotonNetwork.LoadLevel("Rooms");
+
+    }
+
 }
