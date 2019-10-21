@@ -1345,7 +1345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "To Leave Room, please press your RIGHT hand touchpad to let the Laser Pointer
+  m_Text: "To Leave Room, please press your LEFT hand touchpad to let the Laser Pointer
     appear\n \nThen, you can point to the Leave Room Button using trigger on your
     RIGHT hand"
 --- !u!222 &640246495
@@ -2322,11 +2322,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.11
+      value: -0.982
       objectReference: {fileID: 0}
     - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2363,6 +2363,14 @@ PrefabInstance:
     - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 99.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014285432570, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 134.8
       objectReference: {fileID: 0}
     - target: {fileID: 23000013775440852, guid: 4f8a76d2be4d1cb40a9aa32921fcb73c,
         type: 3}
@@ -2515,8 +2523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: 61.3}
-  m_SizeDelta: {x: 158.83, y: 174.02}
+  m_AnchoredPosition: {x: -215.1, y: 58.1}
+  m_SizeDelta: {x: 235.11, y: 178.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497792393
 MonoBehaviour:
@@ -2551,7 +2559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INFO
+  m_Text: INSTRUCTIONS
 --- !u!222 &1497792394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3098,8 +3106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223.56, y: -6.81}
-  m_SizeDelta: {x: 156.97, y: 268.84}
+  m_AnchoredPosition: {x: -223.4, y: -8.4}
+  m_SizeDelta: {x: 163.05, y: 353.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637543443
 MonoBehaviour:
@@ -3123,7 +3131,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3134,10 +3142,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' To see the instruction, please press the touchpad on your LEFT hand.
+  m_Text: 'Using trigger button, grab the colored table leg and snap to the table.
 
 
-    To exit the instruction, please press the trigger button on your LEFT hand.'
+    Table can be lifted up using trigger button.
+
+
+    (You can teleport using RIGHT TouchPad)
+
+'
 --- !u!222 &1637543444
 CanvasRenderer:
   m_ObjectHideFlags: 0
