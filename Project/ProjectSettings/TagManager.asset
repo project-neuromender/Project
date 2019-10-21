@@ -9,6 +9,49 @@ TagManager:
   - Menu
   - Controller
   - Camera
+  - Button
+  - FullStop
+  - G
+  - Y
+  - N
+  - W
+  - Z
+  - A
+  - O
+  - U
+  - Space
+  - V
+  - L
+  - I
+  - C
+  - F
+  - Q
+  - BackSpace
+  - H
+  - X
+  - P
+  - S
+  - J
+  - Coma
+  - R
+  - M
+  - D
+  - E
+  - B
+  - K
+  - T
+  - 6
+  - 2
+  - 0
+  - 3
+  - 4
+  - 7
+  - 9
+  - 8
+  - 5
+  - 1
+  - RoomListing
+  - Leg
   layers:
   - Default
   - TransparentFX

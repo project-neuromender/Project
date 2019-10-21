@@ -11,6 +11,8 @@ public class Hand : MonoBehaviourPunCallbacks
     public GameObject pointer;
     public GameObject controller;
     public GameObject controllerPointer;
+
+   // public GameObject snapZones;
   
     private Socket socket = null;
     private SteamVR_Behaviour_Pose pose = null;
@@ -20,6 +22,8 @@ public class Hand : MonoBehaviourPunCallbacks
 
     private Interactable m_CurrentInteractable = null;
     public List<Interactable> contactInteractables = new List<Interactable>();
+
+   
 
     private void Awake()
     {
@@ -38,7 +42,6 @@ public class Hand : MonoBehaviourPunCallbacks
 
     public void Teleport()
     {
-       
         controller.GetComponent<Teleporting>().enabled = true;
         controllerPointer.SetActive(true);
 
@@ -142,7 +145,10 @@ public class Hand : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            AddInteractable(other.gameObject);
+           // if (other.gameObject.CompareTag("Cube"))
+             //   return;
+
+          AddInteractable(other.gameObject);
         }
     }
 
@@ -162,6 +168,8 @@ public class Hand : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
+           // if (other.gameObject.CompareTag("Cube"))
+                //return;
             //function interact dgn interactable script
             RemoveInteractable(other.gameObject);
         }
@@ -180,12 +188,14 @@ public class Hand : MonoBehaviourPunCallbacks
 
     public void GrabObject()
     {
-        Pickup();
+        if(GameObject.FindGameObjectWithTag("Cube"))
+           Pickup();
     }
 
     public void DropObject()
     {
-        Drop();
+        if (GameObject.FindGameObjectWithTag("Cube"))
+            Drop();
     }
 
     public void TryInteraction()
@@ -199,7 +209,7 @@ public class Hand : MonoBehaviourPunCallbacks
     private bool NearestInteraction()
     {
         Interactable nearestObject = Utility.GetNearestInteractable(transform.position, contactInteractables);
-
+      
         if (nearestObject ) 
             nearestObject.StartInteraction(this);
 
