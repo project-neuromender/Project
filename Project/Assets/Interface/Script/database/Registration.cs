@@ -29,7 +29,7 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {
             Debug.Log("User created successfully.");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("MainMenu");
         }
 
         else

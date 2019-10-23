@@ -240,7 +240,7 @@ MonoBehaviour:
   nameField: {fileID: 1740319434}
   passwordField: {fileID: 1988109880}
   submitButton: {fileID: 1442455759}
-  playerDisplay: {fileID: 0}
+  playerDisplay: {fileID: 1170841397}
 --- !u!1 &239354710
 GameObject:
   m_ObjectHideFlags: 0
