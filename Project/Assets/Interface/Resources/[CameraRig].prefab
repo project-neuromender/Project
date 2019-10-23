@@ -1659,7 +1659,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 1919559420210997069}
   viewIdField: 0
@@ -1866,7 +1866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8630894029211014231
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,7 +2239,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 2498157713545668849}
   viewIdField: 0
@@ -2545,7 +2545,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 251997923524958025}
   viewIdField: 0
@@ -2926,14 +2926,14 @@ MonoBehaviour:
   size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
   vertices:
-  - {x: 0.50000006, y: 0.01, z: -0.5000001}
-  - {x: -0.50000006, y: 0.01, z: -0.5000001}
-  - {x: -0.50000006, y: 0.01, z: 0.5000001}
-  - {x: 0.50000006, y: 0.01, z: 0.5000001}
-  - {x: 0.6500001, y: 0.01, z: -0.6500001}
-  - {x: -0.6500001, y: 0.01, z: -0.6500001}
-  - {x: -0.6500001, y: 0.01, z: 0.6500001}
-  - {x: 0.6500001, y: 0.01, z: 0.6500001}
+  - {x: 1.9999996, y: 0.01, z: -1.0500002}
+  - {x: -1.9999996, y: 0.01, z: -1.0500002}
+  - {x: -1.9999996, y: 0.01, z: 1.0500002}
+  - {x: 1.9999996, y: 0.01, z: 1.0500002}
+  - {x: 2.1499996, y: 0.01, z: -1.2000002}
+  - {x: -2.1499996, y: 0.01, z: -1.2000002}
+  - {x: -2.1499996, y: 0.01, z: 1.2000002}
+  - {x: 2.1499996, y: 0.01, z: 1.2000002}
 --- !u!114 &116534857221162232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,7 +4199,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 5422935115569819846}
   viewIdField: 0

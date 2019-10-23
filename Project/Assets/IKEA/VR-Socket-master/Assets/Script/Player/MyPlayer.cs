@@ -8,6 +8,7 @@ using System;
 public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
 {
     public Camera cam;
+    
     // liat of scripts that should only be active for the local player( PlayerController)
     public MonoBehaviour[] localScripts;
     // list of GameObjects that should only be active for the local player (Camera,AudioListener)
@@ -26,12 +27,15 @@ public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
 
         if (photonView.IsMine)
         {
-          /*  photonView.RPC("Moveable", RpcTarget.AllBuffered);
+            photonView.RPC("Moveable", RpcTarget.AllBuffered);
             photonView.RPC("Hand", RpcTarget.AllBuffered);
             photonView.RPC("Socket", RpcTarget.AllBuffered);
             photonView.RPC("Interactable", RpcTarget.AllBuffered);
             photonView.RPC("Slot", RpcTarget.AllBuffered);
-            photonView.RPC("Static", RpcTarget.AllBuffered);*/
+            photonView.RPC("Static", RpcTarget.AllBuffered);
+            photonView.RPC("ParentChild", RpcTarget.AllBuffered);
+            photonView.RPC("Rotation", RpcTarget.AllBuffered);
+            photonView.RPC("HandAnimator", RpcTarget.AllBuffered);
 
             // MyPlayer.LocalPlayerInstance = this.gameObject;
             //DontDestroyOnLoad(this.gameObject);
@@ -41,6 +45,7 @@ public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
         {
             //deactivate if it is not YOU.
             cam.enabled = false;
+            
             //player is remote, deactivate the scripts and object that should only be enabled for the local player
             for (int i = 0; i < localScripts.Length; i++)
             {

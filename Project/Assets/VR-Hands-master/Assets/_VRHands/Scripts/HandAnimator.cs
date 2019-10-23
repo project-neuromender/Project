@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Photon.Pun;
 
+[PunRPC]
 public class HandAnimator : MonoBehaviour
 {
     public SteamVR_Action_Single m_GrabAction = null;
@@ -37,4 +39,6 @@ public class HandAnimator : MonoBehaviour
     {
         m_Animator.SetFloat("GrabBlend", axis);
     }
+
+    
 }
